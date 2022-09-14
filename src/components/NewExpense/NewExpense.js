@@ -8,7 +8,6 @@ function NewExpense(props) {
   const saveExpenseDataHandler = (enteredExpenseData) => {
     const expenseData = {
       ...enteredExpenseData,
-      id: Math.random().toString(),
     };
     props.onAddExpense(expenseData);
     setIsEditing(false);
@@ -29,7 +28,9 @@ function NewExpense(props) {
           onCancel={stopEditingHandler}
         />
       ) : (
-        <button onClick={startEditingHandler}>Add New Expense</button>
+        <button onClick={startEditingHandler}>
+          Bấm Vào Đây Để Thuê Người Làm
+        </button>
       )}
     </div>
   );
